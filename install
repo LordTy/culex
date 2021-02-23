@@ -1,0 +1,11 @@
+#!/bin/bash
+
+CURDIR="$(cd -P "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+export CURDIR
+envsubst < culex.service.template > culex.service
+
+cp culex.service /lib/systemd/system/
+
+systemctl enable culex.service
+
+systemctl start culex.service

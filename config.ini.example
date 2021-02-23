@@ -1,0 +1,19 @@
+[COAP]
+port = 5863
+interface = ::
+
+[MQTT]
+host = mqtthost
+port = 1883
+username = username
+password = passwprd
+pathprefix = culex
+
+[HOSTS]
+known_hosts = 
+	node1 [2001:db8::13]
+	node2 [2001:db8::14]
+unknown_hosts = 
+	
+	
+

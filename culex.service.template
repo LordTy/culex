@@ -1,0 +1,17 @@
+[Unit]
+Description=Python Culex server
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=${CURDIR}
+ExecStart=${CURDIR}/start
+Restart=always
+RestartSec=15s
+KillMode=process
+TimeoutSec=infinity
+User=pi
+Group=pi
+
+[Install]
+WantedBy=multi-user.target

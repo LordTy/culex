@@ -1,0 +1,8 @@
+#!/bin/bash
+
+DIR="$(cd -P "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+echo 
+
+source "${DIR}/.venv/bin/activate"
+cd ${DIR}
+python3 "${DIR}/culex.py"
